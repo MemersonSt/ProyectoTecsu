@@ -1,0 +1,162 @@
+/*
+-----ESTILOS GLOBALES-----
+*/
+html{
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 15px;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    height: auto;
+}
+
+.contenedor{
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.30);
+    flex-basis: 200px;
+    height: auto;
+    width: 410px;
+    padding: 20px 20px;
+}
+
+/*INDEX1*/
+
+@media (min-width:550px) {
+    h1{ 
+        font-size: 60px;
+        margin-block-end: 0px;
+    }
+    span{
+        font-size: 120px;
+        font: bold;
+        margin-block-start: 0px;
+    }
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitulo{
+    text-align: center;
+    margin-block-end: 0px;
+    font-size: 30px;
+}
+
+.contenedor__parrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-block-start: 0px;
+}
+
+.campo{
+    font-size: 15px;
+    margin: 5px;
+    border: none;
+}
+
+input{
+    width: 290px;
+    height: 30px;
+}
+
+.input-text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow: hidden;
+}
+
+.buttonPrincipal{
+    background-color: #555555;
+    height: 35px;
+    width: 180px;
+    border-radius: 12px;
+    border: none;
+}
+
+/*INDEX 2*/
+
+.contenedor__intro{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo2{
+    font-size: 50px;
+}
+
+.contenedor__button{
+    background-color: #555555;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    border: none;
+}
+button:hover{
+    background-color: #232323ce;
+}
+
+/*INDEX 3*/
+header{
+    display: flex;
+    justify-content: center;
+}
+@media (min-width:880px){
+    .menu{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.clase{
+    text-align: center;
+    width: 400px;
+}
+
+.button-class{
+    width: 200px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
