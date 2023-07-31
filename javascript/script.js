@@ -11,4 +11,4 @@ formulario.addEventListener('submit', (e) => {
     else{
         formulario.submit(window.location.href = 'index2.html');
     }
-});
+}); 
