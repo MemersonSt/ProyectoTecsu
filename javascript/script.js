@@ -8,8 +8,7 @@ formulario.addEventListener('submit', (e) => {
     if(nombre.value.length < 1){
         alert('Por favor, ingresa tu nombre');
     }
+    else{
+        formulario.submit(window.location.href = 'index2.html');
+    }
 });
-
-button.addEventListener('click', () => {
-    window.location.href = '../index2.html';
-} );
