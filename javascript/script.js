@@ -1,14 +1,20 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const usernameInput = document.getElementById("intro");
+    const submitBtn = document.getElementById("BtonUp");
 
-const nombre = document.getElementById('intro');
-const button = document.getElementById('BtonUp');
-const formulario = document.getElementById('form');
+    submitBtn.addEventListener("click", function() {
+      const username = usernameInput.value.trim();
 
-formulario.addEventListener('submit', (e) => {
-  e.preventDefault();
-    if(nombre.value.length < 1){
-        alert('Por favor, ingresa tu nombre');
+      if (validateUsername(username)) {
+        window.location.href = "index2.html";
+      } else {
+        alert("Nombre de usuario no válido.");
+      }
+    });
+
+    function validateUsername(username) {
+      // Requisitos básicos: entre 3 y 20 caracteres alfanuméricos
+      const regex = /^[a-zA-Z0-9]{3,20}$/;
+      return regex.test(username);
     }
-    else{
-        formulario.submit(window.location.href = 'index2.html');
-    }
-}); 
+});

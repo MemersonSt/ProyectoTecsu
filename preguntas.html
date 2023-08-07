@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Práctica con JavaScript</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(129, 83, 65);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        select{
+            border: none;
+            border-radius: 12px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f39265;
+            color: white;
+            width: 30%;
+        }
+
+        button{
+            border: none;
+            border-radius: 10px;
+            background-color: #f39265;
+            color: white;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button:hover{
+            background-color: rgb(196, 132, 36);
+            cursor: pointer;
+        }
+
+        .encabezado {
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .contendor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ee9714;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .contendor__Preguntas{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #e96325;
+            border-radius: 12px;
+            margin: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            height: auto;
+            width: 100%;
+        }
+    </style>
+    <div class="encabezado">
+        <h1>Prueba de utilizar lista para validar una opción</h1>
+        <p>Escoja las respuestas correctas y valide.</p>
+        <h2>Preguntas</h2>
+    </div>
+    <div class="contendor">
+        <div class="contendor__Preguntas">
+            <p>Pregunta 1:</p>
+            <p>Cuánto es 2 + 2</p>
+            <select id="pregunta1">
+                <option value="0">1</option>
+                <option value="0">3</option>
+                <option value="1">4</option>
+            </select>
+        </div>
+        <div class="contendor__Preguntas">
+            <p>Pregunta 2:</p>
+            <p>Cuánto es 1 + 2</p>
+            <select id="pregunta2">
+                <option value="0">1</option>
+                <option value="1">3</option>
+                <option value="0">4</option>
+            </select>
+            <button onclick="verificarRespuestas()">Verificar Respuestas</button>
+            <p id="resultado"></p>
+        </div>
+    </div>
+    <script src="Sumar.js"></script>
+</body>
+</html>
