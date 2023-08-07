@@ -12,9 +12,6 @@
     --complementario3: #aa5430;
 }
 
-html{
-    scroll-snap-type: y mandatory;
-}
 
 body{
     background-color: #f2f2f2;
@@ -46,13 +43,6 @@ h2{
     text-align: center;
 }
 
-.contenedor__slider,
-.contenedor,
-.contenedor__btn{
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
-
 .contenedor__slider{
     width: 80%;
     background-color: var(--primario);
@@ -73,8 +63,6 @@ h2{
     display: flex;
     align-items: center;
 }
-
-
 
 .slider__section{
     margin-block-end: 5%;
