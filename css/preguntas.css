@@ -1,10 +1,3 @@
-body{
-  background-color: rgb(129, 83, 65);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 select{
   border: none;
@@ -37,17 +30,13 @@ button:hover{
   font-family: 'Courier New', Courier, monospace;
 }
 
-.contendor{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.contenedor__practica{
   padding: 20px;
-  text-align: center;
   font-family: 'Courier New', Courier, monospace;
   background-color: #ee9714;
   color: white;
   border-radius: 12px;
+  height: auto;
 }
 
 .contendor__Preguntas{
@@ -55,11 +44,15 @@ button:hover{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #e96325;
   border-radius: 12px;
   margin: 20px;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   height: auto;
-  width: 100%;
+  width: 80%;
+}
+
+.validar{
+  margin: 20px;
+  height: auto;
 }
