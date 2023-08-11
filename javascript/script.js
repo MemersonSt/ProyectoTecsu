@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const username = usernameInput.value.trim();
 
       if (validateUsername(username)) {
-        window.location.href = "index2.html";
+        window.location.href = "Bienvenida.html";
       } else {
         alert("Nombre de usuario no válido.");
       }

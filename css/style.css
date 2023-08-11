@@ -3,29 +3,19 @@
 */
 html{
     box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url(../img/fondo.jpeg);
 }
-
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
-    margin: 15px;
-    padding: 0;
-}
-@media (min-width: 412px){
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        background-color: #f2f2f2;
-        background-image: url(../img/fondo.jpeg);
-    }
-}
-
 
 .contenedor{
     border: 1px solid rgba(255, 255, 255, 0.01);
@@ -40,8 +30,14 @@ html{
     padding: 20px 20px;
 }
 
-
 /*INDEX1*/
+.contenedor-sesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 @media (min-width:410px) {
     h1{ 
@@ -69,6 +65,7 @@ a{
 .principal{
     display: flex;
     flex-direction: column;
+    height: 300px;
 }
 
 .subtitulo{
@@ -85,15 +82,18 @@ a{
     margin-block-start: 0px;
 }
 
+.contenedor-campo{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
 .campo{
+    width: 90%;
     font-size: 15px;
     margin: 5px;
     border: none;
-}
-
-input{
-    width: 290px;
-    height: 30px;
 }
 
 .input-text{
@@ -109,20 +109,25 @@ input{
     width: 180px;
     border-radius: 12px;
     border: none;
+    margin: 10px;
 }
 
 /*INDEX 2*/
 
 .contenedor__intro{
+    height: 410px;
+    width: 400px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .titulo2{
     font-size: 50px;
+    margin: 10px;
 }
 
 .contenedor__button{
@@ -137,30 +142,3 @@ input{
 button:hover{
     background-color: #232323ce;
 }
-
-/*INDEX 3*/
-header{
-    display: flex;
-    justify-content: center;
-}
-@media (min-width:880px){
-    .menu{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.clase{
-    text-align: center;
-    width: 400px;
-}
-
-.button-class{
-    width: 200px;
-}
-
-footer{
-    display: flex;
-    justify-content: center;
-}
-
