@@ -1,3 +1,4 @@
+
 function verificarRespuestas() {
     // Obtener las respuestas seleccionadas por el usuario
     const respuestaPregunta1 = document.getElementById("pregunta1").value;
@@ -9,7 +10,7 @@ function verificarRespuestas() {
 
     // Calcular la nota
     const nota = parseInt(respuestaPregunta1) + parseInt(respuestaPregunta2) + parseInt(respuestaPregunta3) + parseInt(respuestaPregunta4) + parseInt(respuestaPregunta5);
-
+    
 
     // Respuestas correctas
     const respuestasCorrectas = {
@@ -40,4 +41,20 @@ function verificarRespuestas() {
     resultadoElemento.textContent = `Tu nota es: ${nota}/10. Respuestas correctas: ${numRespuestasCorrectas}/5 (${preguntasCorrectas.join(", ")})`;
     const botonVerificar = document.querySelector("button");
     botonVerificar.disabled = true;
+
+    return nota;
 }
+
+var btn = document.getElementById("btn");
+var verificar = document.getElementById("verificar");
+
+verificar.addEventListener("click", function(){
+
+    var nota = verificarRespuestas();
+
+    if (nota >= 7) {
+        btn.classList.remove("not-active");
+    } else {
+        btn.classList.add("not-active");
+    }
+});

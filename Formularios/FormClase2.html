@@ -6,6 +6,7 @@
     <title>Evaluación</title>
     <link rel="stylesheet" href="../css/preguntas.css">
     <link rel="stylesheet" href="../css/slider.css">
+    <script src="../sweetalert2.all.min.js"></script>
 </head>
 <body class="contenedor">
     <div class="contenedor__titulo">
@@ -60,7 +61,7 @@
             <option value="0">c.-Números enteros y decimales (números con coma flotante).</option>
         </select>
         <p></p>
-        <button onclick="verificarRespuestas()">Verificar Respuestas</button>
+        <button id="verificar" onclick="verificarRespuestas()">Verificar Respuestas</button>
         <p id="resultado"></p>
         <script src="../javascript/Sumar.js"></script>
     </section>
@@ -78,9 +79,10 @@
         <button class="button-class">
             <a href="../html/clase5.html">Ejercicio</a>
         </button>
-        <button class="button-class">
+        <button id="btn" class="button-class not-active">
             <a href="../html/clase3.html">Siguiente</a>
         </button>
+        <script src="../javascript/Sumar.js"></script>
     </div>
 </body>
 </html>

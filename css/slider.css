@@ -178,3 +178,8 @@ a{
 .button-class:hover{
     background-color: var(--complementario2);
 }
+
+.not-active { 
+    pointer-events: none; 
+    cursor: default; 
+} 
