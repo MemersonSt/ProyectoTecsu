@@ -4,115 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProyectoTecsu</title>
-    <link rel="stylesheet" href="../css/preguntas.css">
-    <link rel="stylesheet" href="../css/slider.css">
-    <script src="../sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../preguntas.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body class="contenedor">
     <div class="contenedor__titulo">
         <h2>Clase nr. 1</h2>
     </div>
     <section class="contenedor__slider Enteros">
-        <h2 class="subtitulo">Enteros(Int)</h2>
-        <div class="slider" id="slider">
-            <div class="slider__section" id="DEnteros1">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/Int/Int1.png" alt="imagen">
+        <h2>Enteros(Int)</h2>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="IntroSaludo - TiposDatos/Int/Int1.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="IntroSaludo - TiposDatos/Int/Int2.png" alt="Second slide">
+              </div>
             </div>
-            <div class="slider__section" id="DEnteros2">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/Int/Int2.png" alt="imagen">
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <h2>Float-Double</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="IntroSaludo - TiposDatos/Float - Double/Float-Double1.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="IntroSaludo - TiposDatos/Float - Double/Float-Double2.png" alt="Second slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        <h2>String</h2>
+        <div class="contenedor__slider">
+            <div class="slider__section">
+                <img class="slider__img" src="IntroSaludo - TiposDatos/String/String1.png" alt="imagen">
             </div>
             <div class="slider__section">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/Float - Double/Float-Double1.png" alt="imagen">
-            </div>
-            <div class="slider__section">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/Float - Double/Float-Double2.png" alt="imagen">
-            </div>
-            <div class="slider__section">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/String/String1.png" alt="imagen">
-            </div>
-            <div class="slider__section">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/String/String2.png" alt="imagen">
-            </div>
-            <div class="slider__section">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/Bool/Bool1.png" alt="imagen">
-            </div>
-            <div class="slider__section">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/Bool/Bool2.png" alt="imagen">
-            </div>
-            <div class="slider__section">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/Conclusiones 1 y 2/1/Conclusion1.1.png" alt="imagen">
-            </div>
-            <div class="slider__section">
-                <img class="slider__img" src="../img/IntroSaludo - TiposDatos/Conclusiones 1 y 2/1/Conclusion1.2.png" alt="imagen">
+                <img class="slider__img" src="IntroSaludo - TiposDatos/String/String2.png" alt="imagen">
             </div>
         </div>
-        <script src="../javascript/animcaiones.js"></script>
+        <h2>Booleanos</h2>
+        <div class="contenedor__slider">
+            <div class="slider__section">
+                <img class="slider__img" src="IntroSaludo - TiposDatos/Bool/Bool1.png" alt="imagen">
+            </div>
+            <div class="slider__section">
+                <img class="slider__img" src="IntroSaludo - TiposDatos/Bool/Bool2.png" alt="imagen">
+            </div>
+        </div>
+        
     </section>  
     
     <section class="contenedor__practica">
-        <div class="contendor__Preguntas">
-            <h2>Juego de Pregunntas</h2>
-                <h1>Prueba de utilizar lista para validar una opción</h1>
-            <p>Escoja las respuestas correctas y valide.</p>
-            <h2>Preguntas</h2>
-            <div>
-            <p>Pregunta 1:</p>
-            <p>¿Cuál de las siguientes opciones describe correctamente los números enteros?</p>
-                <select id="pregunta1">
-                    <option value="0">a.-Los números enteros son todos los números positivos menores que cero.</option>
-                    <option value="2">b.-Los números enteros son todos los números positivos y negativos, incluyendo el cero.</option>
-                    <option value="0">c.-Los números enteros son únicamente los números naturales mayores que cero.</option>
-                </select>
+        <div class="nombreGm">
+            <h2>¿Donde a donde?</h2>
+        </div>
+        <div class="container">
+            <div class="enunciado">
+                <p>Coloca los elementos donde corresponda antes de continuar.</p>
             </div>
-            <div>
-                <p>Pregunta 2:</p>
-                <p>¿Cuál de las siguientes opciones describe correctamente los datos de tipo float?</p>
-                <select id="pregunta2">
-                    <option value="0">a.-Los datos de tipo float son números enteros sin decimales.</option>
-                    <option value="0">b.-Los datos de tipo float son números que representan caracteres alfanuméricos.</option>
-                    <option value="2">c.-Los datos de tipo float son números con decimales, es decir, números con parte entera y parte fraccionaria.</option>
-                </select>
+            <div class="data-examples">
+                <div class="example" id="ob1">42</div>
+                <div class="example" id="ob2">3.14</div>
+                <div class="example" id="ob3">"Hola"</div>
+                <div class="example" id="ob4">true</div>
             </div>
-            <div>
-                <p>Pregunta 3:</p>
-                <p>¿Cuál de las siguientes opciones describe correctamente los datos de tipo String?</p>
-                <select id="pregunta3">
-                    <option value="0">a.-Los datos de tipo String son números enteros que representan valores numéricos.</option>
-                    <option value="2">b.-Los datos de tipo String son cadenas de caracteres que pueden contener letras, números y símbolos.</option>
-                    <option value="0">c.-Los datos de tipo String son valores booleanos que pueden ser verdaderos o falsos.</option>
-                </select>
+            <div class="containerEj">
+                <div class="data-box">
+                  <h2>Entero</h2>
+                </div>
+                <div class="data-box">
+                  <h2>Flotante</h2>
+                </div>
+                <div class="data-box">
+                  <h2>Cadena</h2>
+                </div>
+                <div class="data-box">
+                  <h2>Booleano</h2>
+                </div>
             </div>
-            <div>
-                <p>Pregunta 4:</p>
-                <p>¿Cuál de las siguientes opciones des	cribe correctamente los datos de tipo Boolean?</p>
-                <select id="pregunta4">
-                    <option value="2">a.-Los datos de tipo Boolean son valores booleanos que pueden ser verdaderos o falsos.</option>
-                    <option value="0">b.-Los datos de tipo Boolean son cadenas de caracteres que pueden contener letras, números y símbolos.</option>
-                    <option value="0">c.-Los datos de tipo Boolean son números enteros que representan valores numéricos.</option>
-                </select>   
+            <script src="script.js"></script>               
+        </div>  
+                
+    </section>
+
+    <div class="contenedor__slider">
+        <h2>Conclusiones</h2>
+        <div class="contenedor__slider">
+            <div class="slider__section">
+                <img class="slider__img" src="IntroSaludo - TiposDatos/Conclusiones 1 y 2/1/Conclusion1.1.png" alt="imagen">
             </div>
-            <div>
-                <p>Pregunta 5:</p>
-                <p>Seleccione Verdadero o Falso : Los datos de tipo Char representan caracteres individuales y se utilizan para almacenar letras, números y símbolos.</p>
-                <select id="pregunta5">
-                    <option value="2">a.-Verdadero</option>
-                    <option value="0">b.-Falso</option>
-                </select>
-            </div>
-            <div class="validar">
-                <p></p>
-                <button onclick="verificarRespuestas()">Verificar Respuestas</button>
-                <p id="resultado"></p>
-                <script src="../javascript/Sumar.js"></script>
+            <div class="slider__section">
+                <img class="slider__img" src="IntroSaludo - TiposDatos/Conclusiones 1 y 2/1/Conclusion1.2.png" alt="imagen">
             </div>
         </div>
-    </section>
+    </div>
     <div class="contenedor__btn">
         <button class="button-class">
-            <a href="../index3.html">Menu</a>
+            <a href="../../Menu.html">Menu</a>
         </button>
         <button class="button-class">
-            <a href="clase2.html">Siguiente</a>
+            <a href="../clase2/clase2.html">Siguiente</a>
         </button>
     </div>
 </body>
