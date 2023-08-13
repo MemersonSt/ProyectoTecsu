@@ -1,122 +1,93 @@
 #Nota : En python la es importante que la sintaxis este correcta
 #Nota : Esto esa siendo mostrado como comentario usando el #, por lo que no afecta al codigo a menos que se elimine el # de cada linea
+#Nota : Para compilar el programa debemos dar click en el triangulo de lado, en la parte posterior derecha de la pantalla
 
-#Clase numero 1
+#Clase 1 
+#Tipos de datos
+#Dentro del mundo  de la programacion existen varios tipos de datos los cuales son los siguientes
+#Int(Numeros enteros)
+#Float(Numeros con decimales)
+#String(Cadena de texto)
+#Char(Caracter)
+#Boolean(Verdadero o falso)
+#Veamos como es el funcionamiento de estos
 
-#Uso de los datos datos primitivos
-#Aprenderemos a utlizar los diferentes datos primitivos en esta clase numero 1 mediante ejemplos previamentes demostrativos e indicativos
-#Tipos de datos que vamos a utilizar
-#1.-Int(Entero)
-#2.-Float(Punto Flotante)
-#3.-String(Texto)
-#4.-Char(Caracter)
-#5.-Boolean(Booleano)
+#Tipos de datos entero
+#Estos tipos de datos nos permite guardar informacion dentro de una variable la cual sera numeros naturales
+#Para poder usarlo se lo realiza de la siguiente manera
+Numeros_Enteros = 1
+Numeros_Enteros1 = 100
+Numeros_Enteros2 = -1
+#Lo que hemos realizado es crear un variable en la cual se guardan los datos
+#En pyhton las variables tomaran un tipo de dato, cuando se le ingrese un dato de cierto tipo
+#Podemos ver el contenido de la variable tipo int, usando la siguiente linea de codigo a continuacion
+print("Datos tipo int")
+print(Numeros_Enteros)
+print(Numeros_Enteros1)
+print(Numeros_Enteros2)
+#Usamos print cuando queremos mostrar el contenido de un dato mediante la consola, de esta forma podemos tanto visualizar
+#O guiar al usuario mediante texto como se mostrara a continuacion
+print(Numeros_Enteros2," Es un numero negativo")
+#Lo que acabamos de realizar, es una concanetacion, lo que es mostrar varios datos en una linea
+#Luego de haber colocado el nombre de la variable usamos la, para que entienda el programa que estamos separando por secciones
+#Y luego usamos las dobles comillas, que es como se inserta un dato tipo string que veremos mas adelante
+#Esto se puede realizar con cualquier tipo de dato o funcion
 
-#               Fase numero 1 : Uso del dato tipo int
+#Tipos de datos float
+#Los datos de tipos float funciona de manera parecida a los datos tipo int, con la particularidad que estos manejan los decimales
+#Por ejemplo, si realizamos una divison (11 dividido entre 2), el resultado de esta divison es 5.5
+#Eso es un dato tipo float, numeros que usan decimales, cosa que si lo mostramos como un dato tipo int, solo aperece los numeros enteros
+#Para poder usarlo se lo realiza de la siguiente 
+Numero_float = 5.5
+Numero_float1 = 10.66
+Numero_float2 = -5.5
+#Como vemos, tambien podemos guardar numeros negativos
+#Y para poder visualisarlos lo hacemos de igual manera usando el print
+print("Datos tipo float")
+print(Numero_float)
+print(Numero_float1)
+print(Numero_float2)
 
-#Para crear un dato tipo int, crearemos una variable tipo global, es decir la definiremos al comienzo del codigo
-numero = 12
-#Esta es la manera en la que declaramos una variable con un dato ya colocado, aunque tambien le podemos asignar un dato usandolo de esta manera 
-#dato = None
-#dato = int(input("Texto que deseamos que se muestre"))
-#Usamos input para indicarle al programa que cuando llegue a esa accion nostros somo los que vamos a ingresar un dato 
-#Para poder ver el contenido del dato en python se lo realiza de la siguiente manera print("Nombre del dato"), cabe aclarar que el nombre que escojamos del dato puede 
-#ser cualquiera mientras no sea una palabra clave del lenguaje de programacion.
+#Tipos de datos string
+#Los datos de tipos string con una cadena de texto
+#Mostrara toda las palabras que esten dentro de la variable, en la cual podemos guardar informacion como nombres, datos o incluso numeros
+#Aunque no es recomendable guardar numeros en una variable tipo string, ya que no podremos realizar calculos mas adelantes
+#Para poder usarlo se lo realiza de la siguiente manera
+print("Datos tipo string")
+Datos_string = "Nombre"
+Datos_string1 = 'Hoy esta soleado'
+Datos_string2 = "12"
+#Lo que hemos usados para que el programa entienda que es un dato tipo string son las dobles comilla " ", y dentro de la doble comillas se coloca
+#el texto que deseamos que este
+#Tambien se lo puede hacer usando las comillas simples '',
+#Lo mostramos a continuacion usando print
+print(Datos_string)
+print(Datos_string1)
+print(Datos_string2)
 
-#           Practica 1            #
-#Muestra el dato de la variable "numero"
+#Tipos de datos char
+#Los datos de tipo char, son resumidamente el uso de caracter, veamos un ejemplo:
+nombre = "Juan"
+#Tenemos la variable tipo string llamada "nombre", el cual contiene el texto Juan
+#Los tipos de datos char, lo que toma en cuenta es el caracter, ya sea numero o letra
+#Para poder obtener un caracter, de ese texto debemos hacer lo siguiente
+#Crear una nueva variable y usar los corchetes, y dentro de este un numero de acuerdo a la posicion del caracter que queremos obtener
+#Pero veamos un ejemplo para entender mejor
+Tipo_char = nombre[0]
+print(Tipo_char)
+#Lo que acabamos de hacer es obtener el primer caracter de este texto, hemos usado el numero 0 porque dentro de la progamacion, es el primer numero
+#Por ejemplo las posiciones son de la siguiente manera, 0 = 1, 1 = 2, 2 = 3, 3 = 4, y asi consecutivamente
+#Empezamos contando desde cero como numero inicial
+#Como usamos 0 dentro del corchete, obtenemos la letra n, siendo esta la letra inicial de este texto, si colocaramos 2, obtendriamos m, siendo
+#este la tercera letra del texto
 
-#Crea una variable con el nombre Tipo_entero, usa el input y muestralo en consola 
-
-
-
-####Ejemplo de codigo####
-#numero_int = int(input("Ingrese un numero : "))
-#print(numero_int)
-
-#               Fase numero 2 : Uso del dato tipo float
-
-#Para poder crear una dato tipo float hay que entender que es este tipo de dato
-#Son datos numericos los cuales llevan decimales
-#Por ejemplo 11/2, el resultado de esta divison es 10.5, estos tipos de datos que llevan decimales son los tipos float
-#Cabe aclarar que se debe usar el punto decimal (2.5), en vez de un coma (2,5)
-Tipo_float = 2.5
-#Tan solo usamos print para poder mostrar en pantalla el dato que contiene esa variable tipo float
-#De igual manera podemos asignarle un dato usando el print
-
-#           Practica 2           #
-
-#Muestra el dato dato de la variable "Tipo_float"
-
-#Crea una variable con el nombre Tipo_float, usa el input y muestra en consola
-
-
-####Ejemplo de codigo####
-#numero_float = float(input("Ingrese un numero : "))
-#print(numero_float)
-
-#               Fase numero 3 : Uso del dato tipo string y tipo char
-
-#Para crear y usar un dato tipo string o char se lo realiza de la siguiente manera
-#Declaramos el nombre de la variable y dentro del conentido debemos usar doble comillas "Dentro del texto" o comillas simples ´ ´ 
-#texto = "hola mundo"
-#texto2 = 'hola mundo'
-#Y simplemente la imprimimos en la pantalla 
-#En este ejemplo hemos usado un dato tipo string, pero tambien podemos usar un dato tipo char en el mismo dato de la variable
-#La diferencia entre un dato tipo string y tipo char son su funcionalidad
-#String : Muestra una cadena de texto
-#Char : Muestra un caracter
-#Pero veamos en un ejemplo
-Tipo_string = "Hola mundo"
-# La variable Tipo_string contiene el texto "Hola mundo", pero si queremos obtener tan solo el primer caracter de esa cadena de texto
-# Debemos realizarlo de la siguiente manera
-# Tipo_char = Tipo_string[0]
-# Lo que acabamos de realizar fue obtener la primera letra de esa cadena de texto
-# Hemos creado una variable y dentro de esa variable hemos llamado a la variable que contenia el texto
-# Usamos los corchetes para obtener el dato tipo string a tipo char [0]
-Tipo_char = Tipo_string[0]
-# Se ha colcado el numero 0 para indicar que queremos obtener la primera letra de este texto
-# Cabe aclarar que los numero en programacion empiezan desde 0, a lo que usualmente nosotros lo usamos como 1
-# 0 = 1, 1 = 2, 2 = 3, 3 = 4, y asi susecivamente
-#Muestra el dato de la variable "Tipo_string" y tambien el dato de la variable "Tipo_char"
-
-#Crea una variable llamada "nombre" y usando el input coloca tu nombre para luego ser mostrado en consola
-
-#Adicional crea una variable tipo char y muestra la primera letra de tu nombre para luego ser mostrado en consola
-
-####Ejemplo de codigo####
-#nombre_muestra = input("Ingrese su nombre : ")
-#print(nombre_muestra)
-#nombre_char = nombre_muestra[0]
-#print("La primera letra del nombre es ", nombre_char)
-
-#               Fase numero 4 : Uso del dato tipo boolean
-
-#Este tipo de dato es sumamente intutitivo ya que estos son verdaderos o falso, o tambien 1 o 0
-#Un ejemplo para poder entenderlo es como el switch de un foco
-#Si el foco esta apagado esta en 0 o su dato es falso
-#Mientras si nostros apretamos el switch y se enciende el foco esta en 1 o su dato es verdadero
-#Lo que hacemos con este tipo de datos es declarar si queremos que se active o se desactive
-#Para hacer interactivo vamos a realizar lo siguiente, se creara un ejemplo el cual estara en forma de comentario
-#Solo elimina el # de cada linea de codigo a continuacion para que deje de ser comentario y el compilador
-#pueda leerlo 
-#Codigo
-#Foco = False
-#opcion = input("Ingrese 1 si desea encender el foco: ")
-#if opcion == "1":
-#    Foco = True
-#    if Foco == True:
-#        print("El foco está encendido")
-#        opcion2 = input("Si desea apagar el foco ingrese 1: ")
-#        if opcion2 == "1":
-#            Foco = False
-#            print("El foco se apagó")
-#        else:
-#            print("El foco se mantiene encendido")
-#    else:
-#        print("El foco se mantuvo apagado")
+#Tipos de datos boolean
+#Son datos de verdadero o falso, o 1 y 0, lo cual si lo vemos con un ejemplo serian como un switch para encender un foco
+#Si el dato es verdadero o 1, el foco estara encendido, mientras que si es falso o 0, el foco estara apagado
+#Y se lo realiza de la siguiente manera
+Encendido = True
+Apagado = False
+#Estos datos suelen ser complementarios de acciones, la cuales realizaran una funcion si el dato es True o False
 
 
-#Bueno esto fue todo por la primera clase, hay que comentar que los datos toman el tipo una vez colocada el dato
-#Es importante que practiquemos el como podemos usarla y animarnos a seguir aprendiendo
-#Y sobre todo entender que todos podemos ser programadores
+

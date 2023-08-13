@@ -7,15 +7,15 @@
     --primario: #c07151;
     --secundario: #278A75;
     --terciario: #9DC39A;
-    --complementario: #F3AF1E;
+    --complementario: #fdce67;
     --complementario2: #4b4341;
     --complementario3: #aa5430;
 }
 
 
 body{
-    background-color: #f2f2f2;
     background-image: url(../img/fondo.jpeg);
+    background-color:  #c0c0c09a ;
     backdrop-filter: blur(4px); 
     display: flex;
     flex-direction: column;
@@ -47,14 +47,13 @@ h2{
 }
 
 .contenedor__slider{
-    width: 80%;
-    background-color: var(--primario);
+    width: 90%;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    background-color: var(--primario);
 }
 
 .subtitulo{
@@ -85,6 +84,39 @@ h2{
     margin-top: 60px;
     height: 200px;
     width: 50%;
+}
+
+.contenedor__descarga{
+    background-color: var(--primario);
+    width: 800px;
+    height: 300px;
+    margin-top: 2%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.enlacePython{
+    text-align: center;
+    margin: 2.5%;
+}
+
+.enlacePython p{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.enlacePython button{
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--complementario);
+    margin: 2.5%;
 }
 
 .contenedor__practica{
