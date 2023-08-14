@@ -1,0 +1,73 @@
+.text{
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerE {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 2%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.ciculos{
+    width: 100%;
+    display: flex;
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.box {
+    width: 250px;
+    height: 200px;
+    margin: 5%;
+    background-color: #ffc977;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.box h2{
+    width: 100%;
+}
+
+.box input{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    border: none;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: grab;
+}

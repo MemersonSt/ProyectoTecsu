@@ -4,20 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProyectoTecsu</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../preguntas.css">
     <link rel="stylesheet" href="../style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
 </head>
 <body class="contenedor">
     <div class="contenedor__titulo">
         <h2>Ejercicios</h2>
     </div>
     <section class="contenedor__slider">
-        <div class="slider" id="slider">
-            <div class="slider__section">
-               
+        
+          <h2>Juego Challenge</h1>
+            <div class="text">
+                <p>Escribe el tipo de dato y arrastra los a donde corresponda: Int, Float, String y boolean</p>
             </div>
-        </div>
+          <div class="containerE">
+            
+            <div class="circulos">
+                <div class="circle" draggable="true">42</div>
+                <div class="circle" draggable="true">'Hola'</div>
+                <div class="circle" draggable="true">3.14</div>
+                <div class="circle" draggable="true">Verdadero</div>
+            </div>
+            <div class="cajas">
+                <div class="box" id="integerBox">
+                    <h2>Enteros</h2>
+                    <input type="text" id="integerType" placeholder="Tipo de dato">
+                  </div>
+                  <div class="box" id="stringBox">
+                    <h2>Cadenas</h2>
+                    <input type="text" id="stringType" placeholder="Tipo de dato">
+                  </div>
+                  <div class="box" id="floatBox">
+                    <h2>Flotantes</h2>
+                    <input type="text" id="floatType" placeholder="Tipo de dato">
+                  </div>
+                  <div class="box" id="booleanBox">
+                    <h2>Booleanos</h2>
+                    <input type="text" id="booleanType" placeholder="Tipo de dato">
+                  </div>
+            </div>
+          </div>
+          
+          <script>
+            const boxes = document.querySelectorAll('.box');
+            const circles = document.querySelectorAll('.circle');
+          
+            boxes.forEach(box => {
+              box.addEventListener('dragover', (e) => {
+                e.preventDefault();
+              });
+          
+              box.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const droppedData = e.dataTransfer.getData('text/plain');
+                const expectedType = box.id.replace("Box", "").toLowerCase();
+                const typeInput = box.querySelector('input[type="text"]').value.trim().toLowerCase();
+                
+                if (typeInput === expectedType) {
+                  box.style.backgroundColor = '#27ae60'; // Highlight correct drop
+                } else {
+                  box.style.backgroundColor = '#e74c3c'; // Highlight incorrect drop
+                }
+              });
+            });
+          
+            circles.forEach(circle => {
+              circle.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', circle.textContent);
+              });
+            });
+          </script>
     </section>
     <div class="contenedor__btn">
         <button class="button-class">

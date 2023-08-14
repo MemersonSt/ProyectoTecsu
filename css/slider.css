@@ -12,7 +12,6 @@
     --complementario3: #aa5430;
 }
 
-
 body{
     background-color: #f2f2f2;
     background-image: url(../img/fondo.jpeg);
@@ -80,10 +79,13 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px;
-    height: 0px;
-    padding-bottom: 200px;
+    margin-top: 0;
     width: 50%;
+}
+
+.contenedor__btn button{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .contenedor__practica{
@@ -145,7 +147,6 @@ a{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
 }
 
 .slider__form{

@@ -1,58 +1,39 @@
-/*Seleciono la clase .example */
-const examples = document.querySelectorAll(".example");
+const ejemplos = document.querySelectorAll('.example');
+const cajas = document.querySelectorAll('.data-box');
 
-examples.forEach(example => {
-  example.addEventListener("dragstart", dragStart);
-  example.addEventListener("dragend", dragEnd);
-});
-
-let draggedExample = null;
-
-function dragStart(event) {
-  event.dataTransfer.setData("text/plain", event.target.dataset.type);
-  draggedExample = event.target;
-}
-
-function dragEnd() {
-  draggedExample = null;
-}
-
-document.addEventListener("mousemove", moveExample);
-
-function moveExample(event) {
-  if (draggedExample && draggedExample.classList.contains("example")) {
-    draggedExample.style.position = "absolute";
-    draggedExample.style.left = `${event.clientX}px`;
-    draggedExample.style.top = `${event.clientY}px`;
-  }
-}
-
-/*document.addEventListener("DOMContentLoaded", function () {
-  const examples = document.querySelectorAll(".example");
-
-  examples.forEach(example => {
-    example.addEventListener("dragstart", dragStart);
-    example.addEventListener("dragend", dragEnd);
+ejemplos.forEach(ejemplo => {
+  ejemplo.addEventListener('dragstart', (e) => {
+    e.dataTransfer.setData('text/plain', ejemplo.textContent);
   });
 });
 
-let draggedExample = null;
+cajas.forEach(caja => {
+  caja.addEventListener('dragover', (e) => {
+    e.preventDefault();
+  });
 
-function dragStart(event) {
-  event.dataTransfer.setData("text/plain", event.target.dataset.type);
-  draggedExample = event.target;
-}
+  caja.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const dataArrastrado = e.dataTransfer.getData('text/plain');
+    const tipoEsperado = caja.querySelector('h2').textContent.toLowerCase();
+    
+    if (validarCoincidencia(dataArrastrado, tipoEsperado)) {
+      caja.style.backgroundColor = '#27ae60'; // Coincidencia correcta
+    } else {
+      caja.style.backgroundColor = '#e74c3c'; // Coincidencia incorrecta
+    }
+  });
+});
 
-function dragEnd() {
-  draggedExample = null;
-}
-
-document.addEventListener("mousemove", moveExample);
-
-function moveExample(event) {
-  if (draggedExample && draggedExample.classList.contains("example")) {
-    draggedExample.style.position = "absolute";
-    draggedExample.style.left = `${event.clientX}px`;
-    draggedExample.style.top = `${event.clientY}px`;
+function validarCoincidencia(datos, tipoEsperado) {
+  if (tipoEsperado === 'entero' && /^\d+$/.test(datos)) {
+    return true;
+  } else if (tipoEsperado === 'flotante' && /^\d+\.\d+$/.test(datos)) {
+    return true;
+  } else if (tipoEsperado === 'cadena' && /^".*"$/.test(datos)) {
+    return true;
+  } else if (tipoEsperado === 'booleano' && /^(verdadero|falso)$/.test(datos)) {
+    return true;
   }
-}*/
+  return false;
+}
