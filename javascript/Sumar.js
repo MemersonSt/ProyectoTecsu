@@ -40,4 +40,20 @@ function verificarRespuestas() {
     resultadoElemento.textContent = `Tu nota es: ${nota}/10. Respuestas correctas: ${numRespuestasCorrectas}/5 (${preguntasCorrectas.join(", ")})`;
     const botonVerificar = document.querySelector("button");
     botonVerificar.disabled = true;
+
+    return nota;
 }
+
+var btn = document.getElementById("btn");
+var verificar = document.getElementById("verificar");
+
+verificar.addEventListener("click", function(){
+
+    var nota = verificarRespuestas();
+
+    if (nota >= 7) {
+        btn.classList.remove("not-active");
+    } else {
+        btn.classList.add("not-active");
+    }
+});
