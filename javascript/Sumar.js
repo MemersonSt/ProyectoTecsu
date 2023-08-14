@@ -1,3 +1,5 @@
+
+
 function verificarRespuestas() {
     // Obtener las respuestas seleccionadas por el usuario
     const respuestaPregunta1 = document.getElementById("pregunta1").value;
@@ -44,6 +46,9 @@ function verificarRespuestas() {
     return nota;
 }
 
+
+//import { getClassId } from "./getClassId";
+//import { getClassByIdFromNameFile } from "../javascript/getClassId";
 var btn = document.getElementById("btn");
 var verificar = document.getElementById("verificar");
 
@@ -53,7 +58,9 @@ verificar.addEventListener("click", function(){
 
     if (nota >= 7) {
         btn.classList.remove("not-active");
+        //console.log(getClassByIdFromNameFile());
     } else {
         btn.classList.add("not-active");
     }
 });
+

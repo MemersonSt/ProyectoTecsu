@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../html/style.css">
     <link rel="stylesheet" href="../html/clase2/style.css">
     <link rel="stylesheet" href="../css/slider.css">
+    <script type="module" src="../javascript/getClassId.js"></script>
 </head>
 <body>
     <section class="contenedor__practica">
@@ -59,9 +60,16 @@
             <option value="0">c.-Números enteros y decimales (números con coma flotante).</option>
         </select>
         <p></p>
-        <button id="verificar" onclick="verificarRespuestas()">Verificar Respuestas</button>
+        <button id="verificar">Verificar Respuestas</button>
+
+        <script type="module" src="../javascript/Sumar.js"></script>
+        <script>
+            document.getElementById("verificar").onclick = function() {
+                verificarRespuestas();
+            }
+        </script>
         <p id="resultado"></p>
-        <script src="../javascript/Sumar.js"></script>
+        
     
     </section>
 
@@ -81,7 +89,7 @@
         <button id="btn" class="button-class not-active">
             <a href="../html/clase3/clase3.html">Siguiente</a>
         </button>
-        <script src="../javascript/Sumar.js"></script>
+        <script type="module" src="../javascript/Sumar.js"></script>
     </div>
 </body>
 </html>
