@@ -78,9 +78,11 @@ h2{
 
 .contenedor__btn{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin: 0px;
-    height: 200px;
+    height: 0px;
+    padding-bottom: 200px;
     width: 50%;
 }
 
@@ -115,14 +117,15 @@ h2{
 
 .button-class{
     height: 40px;
-    width: 200px;
+    width: 160px;
+    margin-bottom: 120px;
     border-radius: 20px;
     border: none;
     font-size: 14px;
     font-weight: bold;
     background-color: var(--complementario);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 a{
@@ -133,3 +136,35 @@ a{
 .button-class:hover{
     background-color: var(--complementario2);
 }
+
+
+.contenedor__imgForm{
+    width: 80%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slider__form{
+    width: 45%;
+    height: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 45%;
+    height: 27%;
+    display: flex;
+    align-items: center;
+}
+
+.not-active { 
+    pointer-events: none; 
+    cursor: default; 
+} 
