@@ -59,6 +59,13 @@ verificar.addEventListener("click", function(){
     if (nota >= 7) {
         btn.classList.remove("not-active");
         //console.log(getClassByIdFromNameFile());
+        const nameFile = window.location.pathname.split("/").pop();
+        const numberClass = nameFile.replace("FormClass", ""). replace(".html", "");
+        const numeroClase = numberClass.replace("FormClass", "");
+        //alert(numeroClase);
+        fetch(`/api/datos/guardar-dato?classId=${numeroClase}`)
+        .then(response => response.json())
+        .then(data => data.estado);
     } else {
         btn.classList.add("not-active");
     }
